@@ -7,7 +7,7 @@ public class GameFrame extends JFrame implements ActionListener {
     GameFrame() {
         // panel inside the frame where the logic of the game will be set up
         //GamePanel panel = new GamePanel();
-        this.add(new GamePanel()); // adding the GamePanel class to GameFrame class
+        this.add(new GamePanel()); // creating and adding GamePanel instance to GameFrame class
         this.setTitle("Snake");
         this.setDefaultCloseOperation((JFrame.EXIT_ON_CLOSE));
         this.setResizable(false);

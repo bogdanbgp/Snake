@@ -158,8 +158,8 @@ public class GamePanel extends JPanel implements ActionListener {
 // .......................................................................................................
         public void newApple(){
             // generate the coordinates of a new apple (random locations)
-            appleX = random.nextInt((int)(SCREEN_WIDTH/UNIT_SIZE))*UNIT_SIZE;
-            appleY = random.nextInt((int)(SCREEN_WIDTH/UNIT_SIZE))*UNIT_SIZE;
+            appleX = random.nextInt((int)(SCREEN_WIDTH/UNIT_SIZE))*UNIT_SIZE; // random on X axis
+            appleY = random.nextInt((int)(SCREEN_WIDTH/UNIT_SIZE))*UNIT_SIZE; // random on Y axis
         }
 // .......................................................................................................
 
@@ -199,7 +199,8 @@ public class GamePanel extends JPanel implements ActionListener {
 
 
 // .......................................................................................................
-      public void checkApple() { //x[0] = x position of snake's head. y[0] = y position of snake's head
+      public void checkApple() { //x[0] = x position of snake's head horizontally.
+                                 // y[0] = y position of snake's head vertically
             if((x[0] == appleX) && (y[0] == appleY)) {
                 bodyParts++; // body grows by 1 body part when the snake eats an apple
                 applesEaten++; // the score
